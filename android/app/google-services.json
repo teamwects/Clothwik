@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "125409505279",
+    "project_id": "clothwik-7b0ab",
+    "storage_bucket": "clothwik-7b0ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125409505279:android:6f3a501fdd20dfa4cac1ca",
+        "android_client_info": {
+          "package_name": "com.shop.clothwik"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_73OB0NkVRVctKhM71zD14qwm-XJmmVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
