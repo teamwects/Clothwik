@@ -6,7 +6,7 @@ on:
 jobs:
   build-ios:
     name: 🎉 iOS Build
-    runs-on: macos-latest
+    runs-on: macos-11  # Ensures compatibility with iOS 13+ and recent Xcode versions.
     steps:
       - uses: actions/checkout@v3
 
@@ -14,10 +14,18 @@ jobs:
         with:
           channel: 'stable'
           architecture: x64
+          
+      - name: Set iOS deployment target to 13.0
+        run: echo "platform :ios, '13.0'" >> ios/Podfile  # Ensures the Podfile has the correct target.
+      
       - run: flutter pub get
       
-
-      - run: pod repo update
+      - name: Update CocoaPods repo
+        run: pod repo update
+        working-directory: ios
+        
+      - name: Install CocoaPods dependencies
+        run: pod install
         working-directory: ios
 
       - run: flutter build ios --release --no-codesign
@@ -39,4 +47,4 @@ jobs:
           file: build/ios/iphoneos/FlutterIpaExport.ipa
           tag: v1.0
           overwrite: true
-          body: "This is first release"
+          body: "This is the first release"
