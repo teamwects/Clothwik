@@ -5,7 +5,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>$(DEVELOPMENT_LANGUAGE)</string>
     <key>CFBundleDisplayName</key>
-	<string>Clothwik</string>
+    <string>Clothwik</string>
     <key>CFBundleExecutable</key>
     <string>$(EXECUTABLE_NAME)</string>
     <key>CFBundleIdentifier</key>
@@ -13,9 +13,10 @@
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-	<string>Clothwik</string>
+    <string>Clothwik</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
+
     <key>CFBundleShortVersionString</key>
     <string>$(FLUTTER_BUILD_NAME)</string>
     <key>CFBundleSignature</key>
@@ -47,13 +48,21 @@
     <true/>
     <key>UIStatusBarHidden</key>
     <false/>
+    
+    <!-- Privacy Permissions -->
     <key>NSPhotoLibraryUsageDescription</key>
     <string>We need access to your photo library to upload photos.</string>
     <key>NSCameraUsageDescription</key>
     <string>We need access to your camera to take photos.</string>
     <key>NSPhotoLibraryAddUsageDescription</key>
     <string>We need access to your photo library to save photos.</string>
+    
+    <!-- Firebase Configuration -->
     <key>FirebaseAppDelegateProxyEnabled</key>
     <false/>
+    
+    <!-- New Minimum iOS Version Requirement -->
+    <key>MinimumOSVersion</key>
+    <string>13.0</string>
   </dict>
 </plist>
