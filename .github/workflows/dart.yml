@@ -1,4 +1,4 @@
-prophecy_freshname: iOS-ipa-build
+name: clothwik_ios
 
 on:
   workflow_dispatch:
