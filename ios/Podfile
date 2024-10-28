@@ -1,16 +1,23 @@
-platform :ios, '13.0'
-workspace 'Runner.xcworkspace'
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'  # Change the version if necessary
 
-target 'Runner' do
-  use_frameworks!
-  use_modular_headers!
+# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
-  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
-end
+project 'Runner'
 
-post_install do |installer|
+# Define your flutter dependencies in this method
+def flutter_install_all_ios_pods(installer)
+  flutter_root = File.expand_path('..', Dir.pwd)
+  load File.join(flutter_root, 'packages', 'flutter_tools', 'bin', 'podhelper.rb')
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
   end
 end
 
+target 'Runner' do
+  use_frameworks!
+  use_modular_headers!
+
+  flutter_install_all_ios_pods(installer)
+end
